@@ -8,14 +8,28 @@ class TodoForm extends React.Component {
         }
     }
 
+    itemChange = event => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+
+    itemSubmit = event => {
+        event.preventDefault();
+        this.setState({
+            item: ''
+        })
+    }
+
     render() {
         return(
-            <form>
+            <form onSubmit={this.itemSubmit}>
                 <input
                 type='text'
                 id='item'
                 name='item'
                 value={this.state.item}
+                onChange={this.itemChange}
                 />
                 <button type='submit'>Add Item</button>
             </form>
