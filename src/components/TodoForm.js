@@ -8,6 +8,7 @@ class TodoForm extends React.Component {
         }
     }
 
+
     itemChange = event => {
         this.setState({
             [event.target.name]: event.target.value
@@ -17,6 +18,9 @@ class TodoForm extends React.Component {
     itemSubmit = event => {
         event.preventDefault();
         this.props.addItem(event, this.state.item)
+        let listItem = this.state.item;
+        console.log(listItem);
+        window.localStorage.setItem('item', JSON.stringify(listItem));
         this.setState({
             item: ''
         })
