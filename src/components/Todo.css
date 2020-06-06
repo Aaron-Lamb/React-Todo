@@ -1,0 +1,20 @@
+.item.completed{
+    text-decoration: line-through;
+    color: green;
+}
+
+body {
+    background-image: url('./stil-ck0i9Dnjtj0-unsplash.jpg');
+}
+
+.App{
+    background-color: rgb(61, 59, 59);
+    color: rgb(162, 207, 247);
+    border: 2px solid black;
+    width: 40%;
+    height: 50vh;
+    margin: 10% 0% 0% 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
